@@ -24,9 +24,9 @@ return new class extends Migration
 
             // 1. Links to the 'topic' table
             $table->foreignUuid('topic_id')
-                ->nullable() // You said it was nullable
+                ->nullable() 
                 ->constrained('topic', 'topic_id') // Links to topic(topic_id)
-                ->nullOnDelete(); // If a topic is deleted, set this to NULL
+                ->nullOnDelete(); 
 
             // 2. Links to the 'users' table
             // This creates a 'created_by' column
